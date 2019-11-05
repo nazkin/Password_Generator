@@ -5,18 +5,18 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
 var specialCharacters = "!@#$%^&*?";
 
-var passwordlength = 9; // User defined length
+var passwordlength = 20; // User defined length
 var passwordStr = ""; // The string that will contain the total of all characters used to generate password
 
 var generatedPassword = ""; //The string password that will be automatically generated
 
 //Boolean variables that will be corresponding to the radio selections in the html
-var wantUpper = false; 
+var wantUpper = true; 
 var wantLower = true;
-var wantNumber = false;
-var wantSpecial = true;
+var wantNumber = true;
+var wantSpecial = false;
 
-//Create a funciton that would help splice an array according to a user selection 
+//Conditional control of radio selections to control the content of generated password 
 if(wantUpper == true){
   passwordStr = passwordStr.concat(upperCase);
 }
@@ -33,12 +33,13 @@ if(wantSpecial == true){
     passwordStr = passwordStr.concat(specialCharacters);
 }
 
-console.log("Your passcode is " + passwordStr);
+console.log("Your sample is " + passwordStr);
 
 //Create a random function that selects a random character from the final array 
 for(var x = 0; x < passwordlength; x++) {
-
+    generatedPassword += passwordStr.charAt(Math.floor(Math.random() * passwordStr.length)); 
 }
+console.log("Your password is " + generatedPassword);
 
 
 //Find a way to munipulate the DOM to read input from the form elements and output my password
