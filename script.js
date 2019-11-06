@@ -34,8 +34,13 @@ initForm();
 
 //Boolean variables that will be corresponding to the radio selections in the html
 
+var runAppButton = document.querySelector('.submit-data');
+
+runAppButton.addEventListener('click', letsRun());
 
 
+
+function letsRun () {
 //Create DOM querySelectors to capture the input from chackboxes
 
 wantUpper = document.querySelector('#largeL').checked;
@@ -80,7 +85,11 @@ console.log(wantUpper);
           generatedPassword += passwordStr.charAt(Math.floor(Math.random() * passwordStr.length)); 
       }
       console.log("Your password is " + generatedPassword);
-      
-      
+
+      document.querySelector('p').textContent = generatedPassword;
+
+}
+
+
 
 
