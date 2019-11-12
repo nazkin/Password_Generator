@@ -1,0 +1,17 @@
+
+body {
+    background-color: rgb(74, 201, 74);
+}
+.password-output {
+    margin-left: 100px;
+    border: 1px solid black;
+    background-color: rgb(186, 224, 186);
+}
+
+.form-content {
+    background-color : rgb(133, 175, 133);
+    font-weight: 300;
+    font-size: 20px;
+    color: linen;
+    border: 1px solid darkolivegreen;
+}
